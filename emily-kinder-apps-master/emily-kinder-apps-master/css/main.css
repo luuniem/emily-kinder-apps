@@ -1,0 +1,115 @@
+* {
+  font-family: "Fredoka One", cursive;
+}
+
+.container {
+  border: 1px solid black;
+  margin-top: 3vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5vh;
+  color: #ff8c94;
+}
+
+#nav-mathGame .generate-math {
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+}
+
+#nav-mathGame .blanksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 15vh;
+  padding: 0;
+}
+
+#nav-mathGame .blanksList .blanks {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#nav-mathGame .blanksList .blanks span {
+  font-size: 8rem;
+  width: 10%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991px) {
+  #nav-mathGame .blanksList .blanks span {
+    height: 22vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-mathGame .blanksList .blanks span {
+    height: 40vh;
+  }
+}
+
+#nav-mathGame .blanksList .blanks .input-class {
+  width: 100%;
+  display: none;
+}
+
+#nav-mathGame .blanksList .blanks .card-1,
+#nav-mathGame .blanksList .blanks .card-2,
+#nav-mathGame .blanksList .blanks .answer-card {
+  border-radius: 10px;
+  width: 40%;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+#nav-mathGame .blanksList .blanks .answer-text {
+  display: none;
+}
+
+#nav-mathGame .blanksList .blanks .correct-answer {
+  display: none;
+  border-radius: 10px;
+}
+
+#nav-mathGame .blanksList .blanks .correct-answer {
+  display: none;
+  color: white;
+  background-color: #c5d6cb;
+  font-size: 3rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#nav-mathGame .blanksList .blanks .wrong-answer {
+  display: none;
+  background-color: #ff8c94;
+  font-size: 3rem;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=main.css.map */
