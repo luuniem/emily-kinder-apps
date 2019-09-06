@@ -31,7 +31,7 @@
             role="tab"
             aria-controls="nav-home"
             aria-selected="true"
-            >MATH</a
+            >MATH - Addition</a
           >
           <a
             class="nav-item nav-link"
@@ -41,7 +41,7 @@
             role="tab"
             aria-controls="nav-profile"
             aria-selected="false"
-            >Profile</a
+            >Alphabet</a
           >
           <a
             class="nav-item nav-link"
@@ -51,12 +51,22 @@
             role="tab"
             aria-controls="nav-contact"
             aria-selected="false"
-            >Contact</a
+            >Calendar</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-prize-tab"
+            data-toggle="tab"
+            href="#nav-prize"
+            role="tab"
+            aria-controls="nav-prize"
+            aria-selected="false"
+            >PRIZES</a
           >
         </div>
       </nav>
       <!-- NAVIGATION END -->
-      <div class="tab-content" id="nav-tabContent">
+      <div class="tab-content" id="nav-mathGame">
         <div
           class="tab-pane fade show active"
           id="nav-home"
@@ -68,19 +78,46 @@
             class="btn btn-info generate-math"
             onclick="generateNumbers()"
           >
-            Generate
+            New Set
           </button>
           <ul class="blanksList">
-            <li class="blanks"></li>
+            <li class="blanks">
+              <span class="card-1 cards"></span>
+              <span> + </span>
+              <span class="card-2 cards"></span>
+              <span> = </span>
+              <span class="answer-card">
+                <span class="input-class">
+                  <form id="math-add-form">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Answer"
+                      id="input-answer"
+                    />
+                    <button class="btn btn-info" type="submit">Enter</button>
+                  </form>
+                </span>
+                <span class="answer-text"> </span>
+                <span class="correct-answer">CORRECT!</span>
+                <span class="wrong-answer" onclick="tryAgain()"
+                  >Oops...<br /><button class="btn btn-primary">
+                    Try Again!
+                  </button></span
+                >
+              </span>
+            </li>
           </ul>
         </div>
+
+        <!-- END MATH GAME -->
         <div
           class="tab-pane fade"
           id="nav-profile"
           role="tabpanel"
           aria-labelledby="nav-profile-tab"
         >
-          ...
+          COMING SOON! - CONCAT ALPHABETS
         </div>
         <div
           class="tab-pane fade"
@@ -88,7 +125,15 @@
           role="tabpanel"
           aria-labelledby="nav-contact-tab"
         >
-          ...
+          COMING SOON! - LEARN DAYS, WEEKS, MONTHS
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-prize"
+          role="tabpanel"
+          aria-labelledby="nav-prize-tab"
+        >
+          EMILY'S PRIZES - COMING SOON
         </div>
       </div>
     </div>
