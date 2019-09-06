@@ -37,14 +37,22 @@ h1 {
       list-style: none;
       @include flex;
       span {
-        font-size: 4rem;
+        font-size: 8rem;
         width: 10%;
         text-align: center;
         @include flex;
         height: 45vh;
         justify-content: center;
         align-items: center;
+        @media(max-width: 991px){
+        height: 22vh;
+
+        }
+        @media(min-width: 992px){
+        height: 40vh;
+        }
       }
+
       .input-class {
         width: 100%;
         display: none;
@@ -57,26 +65,25 @@ h1 {
         -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+        background-color: rgba(255,255,255,.45);
+
       }
 
-      .card-1 {
-        background-color: $peach;
-      }
-      .card-2 {
-        background-color: $mint;
-      }
       .answer-text {
         display: none;
       }
       .correct-answer {
         display: none;
+        border-radius: 10px;
       }
       .correct-answer {
         display: none;
         color: white;
-        background-color: rgb(89, 210, 133);
+        background-color: rgb(197, 214, 203);
         font-size: 3rem;
         width: 100%;
+        border-radius: 10px;
+
       }
       .wrong-answer {
         display: none;
@@ -84,6 +91,8 @@ h1 {
         font-size: 3rem;
         width: 100%;
         flex-direction: column;
+        border-radius: 10px;
+
       }
     }
   }

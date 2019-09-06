@@ -41,7 +41,7 @@ h1 {
 }
 
 #nav-mathGame .blanksList .blanks span {
-  font-size: 4rem;
+  font-size: 8rem;
   width: 10%;
   text-align: center;
   display: -webkit-box;
@@ -56,6 +56,18 @@ h1 {
           align-items: center;
 }
 
+@media (max-width: 991px) {
+  #nav-mathGame .blanksList .blanks span {
+    height: 22vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-mathGame .blanksList .blanks span {
+    height: 40vh;
+  }
+}
+
 #nav-mathGame .blanksList .blanks .input-class {
   width: 100%;
   display: none;
@@ -68,14 +80,7 @@ h1 {
   width: 40%;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-#nav-mathGame .blanksList .blanks .card-1 {
-  background-color: #ffd3b5;
-}
-
-#nav-mathGame .blanksList .blanks .card-2 {
-  background-color: #aae7d0;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 #nav-mathGame .blanksList .blanks .answer-text {
@@ -84,14 +89,16 @@ h1 {
 
 #nav-mathGame .blanksList .blanks .correct-answer {
   display: none;
+  border-radius: 10px;
 }
 
 #nav-mathGame .blanksList .blanks .correct-answer {
   display: none;
   color: white;
-  background-color: #59d285;
+  background-color: #c5d6cb;
   font-size: 3rem;
   width: 100%;
+  border-radius: 10px;
 }
 
 #nav-mathGame .blanksList .blanks .wrong-answer {
@@ -103,5 +110,6 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */
