@@ -1,0 +1,36 @@
+* {
+  font-family: "Fredoka One", cursive;
+}
+
+.container {
+  border: 1px solid black;
+  margin-top: 3vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.blanksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blanks {
+  width: calc(100% / 5 - 10px);
+  border-bottom: 1px solid black;
+  list-style: none;
+}
+
+.generate-math {
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=main.css.map */
