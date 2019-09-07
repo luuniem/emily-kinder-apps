@@ -15,6 +15,9 @@
       href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
       rel="stylesheet"
     />
+    <!-- <link rel="stylesheet" href="css/animate.css">
+     -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -83,13 +86,13 @@
           </button>
           <ul class="blanksList">
             <li class="blanks">
-              <span class="card-1 cards"></span>
+              <span class="card-1 cards animated"></span>
               <span> + </span>
-              <span class="card-2 cards"></span>
+              <span class="card-2 cards animated"></span>
               <span> = </span>
-              <span class="answer-card">
+              <span class="answer-card animated">
                 <span class="input-class">
-                  <form id="math-add-form">
+                  <form id="math-add-form" onclick="resetClass()">
                     <input
                       type="text"
                       class="form-control"
@@ -100,8 +103,8 @@
                   </form>
                 </span>
                 <span class="answer-text"> </span>
-                <span class="correct-answer">CORRECT!</span>
-                <span class="wrong-answer" onclick="tryAgain()"
+                <span class="correct-answer animated">CORRECT!</span>
+                <span class="wrong-answer animated" onclick="tryAgain()"
                   >Oops...<br /><button class="btn btn-primary">
                     Try Again!
                   </button></span
