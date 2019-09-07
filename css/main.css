@@ -13,6 +13,16 @@ h1 {
   color: #ff8c94;
 }
 
+#nav-mathGame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 #nav-mathGame .generate-math {
   margin: 0 auto;
   display: block;
@@ -71,6 +81,16 @@ h1 {
 #nav-mathGame .blanksList .blanks .input-class {
   width: 100%;
   display: none;
+}
+
+#nav-mathGame .blanksList .blanks #math-add-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #nav-mathGame .blanksList .blanks .card-1,

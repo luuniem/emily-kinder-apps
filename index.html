@@ -17,7 +17,10 @@
     />
     <!-- <link rel="stylesheet" href="css/animate.css">
      -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -69,7 +72,7 @@
         </div>
       </nav>
       <!-- NAVIGATION END -->
-      <div class="tab-content" id="nav-mathGame" >
+      <div class="tab-content" id="nav-mathGame">
         <div
           class="tab-pane fade show active"
           id="nav-home"
@@ -141,6 +144,7 @@
         </div>
       </div>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -156,6 +160,23 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAXg3Dr4pd_Ep1jbZ_FsFP2HLomHdguJ2A",
+        authDomain: "emily-kinder-app.firebaseapp.com",
+        databaseURL: "https://emily-kinder-app.firebaseio.com",
+        projectId: "emily-kinder-app",
+        storageBucket: "emily-kinder-app.appspot.com",
+        messagingSenderId: "424027269458",
+        appId: "1:424027269458:web:8d8e15ebd5df6c45ebb28b"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
     <script src="main.js"></script>
   </body>
 </html>

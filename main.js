@@ -8,17 +8,17 @@ let inputAnswer = document.getElementById("input-answer");
 let inputClass = document.querySelector(".input-class");
 let correctAnswer = document.querySelector(".correct-answer");
 let wrongAnswer = document.querySelector(".wrong-answer");
-
-
+let correctSound = new Audio("sounds/correctSound.mp3");
+let addPoint = 1;
 
 function generateNumbers() {
   let blankArray = Array.from({ length: 2 }, () =>
-    Math.floor(Math.random() * 5)
+    Math.floor(Math.random() * 5 + 1)
   );
   mathAddForm.reset();
-  cardOne.classList.add('flipInX');
-  cardTwo.classList.add('flipInX');
-  answerCard.classList.add('flipInX');
+  cardOne.classList.add("flipInX");
+  cardTwo.classList.add("flipInX");
+  answerCard.classList.add("flipInX");
 
   mathAddForm.style.display = "block";
   cardOne.innerHTML = blankArray[0];
@@ -31,17 +31,19 @@ function generateNumbers() {
 
 mathAddForm.addEventListener("submit", function(e) {
   e.preventDefault();
-  console.log(typeof cardAnswerText.innerHTML);
   if (inputAnswer.value === cardAnswerText.innerHTML) {
     inputClass.style.display = "none";
     correctAnswer.style.display = "flex";
-    cardOne.classList.remove('flipInX');
-    cardTwo.classList.remove('flipInX');
+    cardOne.classList.remove("flipInX");
+    cardTwo.classList.remove("flipInX");
+    correctSound.play();
+    // writeData();
+    mathPoint();
   } else {
     inputClass.style.display = "none";
     wrongAnswer.style.display = "flex";
-    cardOne.classList.add('shake');
-    cardTwo.classList.add('shake');
+    cardOne.classList.add("shake");
+    cardTwo.classList.add("shake");
   }
 });
 
@@ -50,7 +52,25 @@ function tryAgain() {
   wrongAnswer.style.display = "none";
 }
 
-function resetClass(){
-  cardOne.classList.remove('flipInX','shake');
-  cardTwo.classList.remove('flipInX','shake');
+function resetClass() {
+  cardOne.classList.remove("flipInX", "shake");
+  cardTwo.classList.remove("flipInX", "shake");
+}
+
+// function writeData() {
+//   firebase
+//     .firestore()
+//     .ref("Points")
+//     .set({
+//       total: addPoint++
+//     });
+// }
+
+function mathPoint() {
+  firebase
+    .firestore()
+    .collection("Points")
+    .add({
+      total: addPoint++
+    });
 }

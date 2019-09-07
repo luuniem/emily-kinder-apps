@@ -20,6 +20,8 @@ h1 {
   color: $red;
 }
 #nav-mathGame {
+  display: flex;
+  flex-direction: column;
   .generate-math {
     margin: 0 auto;
     display: block;
@@ -55,6 +57,10 @@ h1 {
       .input-class {
         width: 100%;
         display: none;
+      }
+      #math-add-form {
+        display: flex;
+        flex-direction: column;
       }
       .card-1,
       .card-2,
