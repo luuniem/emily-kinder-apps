@@ -44,12 +44,11 @@ h1 {
         height: 45vh;
         justify-content: center;
         align-items: center;
-        @media(max-width: 991px){
-        height: 22vh;
-
+        @media (max-width: 991px) {
+          height: 22vh;
         }
-        @media(min-width: 992px){
-        height: 40vh;
+        @media (min-width: 992px) {
+          height: 40vh;
         }
       }
 
@@ -65,8 +64,7 @@ h1 {
         -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-        background-color: rgba(255,255,255,.45);
-
+        background-color: rgba(255, 255, 255, 0.45);
       }
 
       .answer-text {
@@ -79,11 +77,10 @@ h1 {
       .correct-answer {
         display: none;
         color: white;
-        background-color: rgb(197, 214, 203);
+        background-color: rgb(38, 199, 95);
         font-size: 3rem;
         width: 100%;
         border-radius: 10px;
-
       }
       .wrong-answer {
         display: none;
@@ -92,7 +89,6 @@ h1 {
         width: 100%;
         flex-direction: column;
         border-radius: 10px;
-
       }
     }
   }
