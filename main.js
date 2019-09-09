@@ -15,18 +15,22 @@ function generateNumbers() {
   let blankArray = Array.from({ length: 2 }, () =>
     Math.floor(Math.random() * 5 + 1)
   );
-  mathAddForm.reset();
-  cardOne.classList.add("flipInX");
-  cardTwo.classList.add("flipInX");
-  answerCard.classList.add("flipInX");
+  cardAnswerText.innerHTML = blankArray[0] + blankArray[1];
 
+  mathAddForm.reset();
   mathAddForm.style.display = "block";
   cardOne.innerHTML = blankArray[0];
   cardTwo.innerHTML = blankArray[1];
-  cardAnswerText.innerHTML = blankArray[0] + blankArray[1];
   inputClass.style.display = "flex";
+  addClasses();
   correctAnswer.style.display = "none";
   wrongAnswer.style.display = "none";
+}
+
+function addClasses() {
+  cardOne.classList.add("flipInX");
+  cardTwo.classList.add("flipInX");
+  answerCard.classList.add("flipInX");
 }
 
 mathAddForm.addEventListener("submit", function(e) {

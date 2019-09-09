@@ -124,7 +124,49 @@
           role="tabpanel"
           aria-labelledby="nav-profile-tab"
         >
-          COMING SOON! - CONCAT ALPHABETS
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+            style="background: url('images/forky.jpg');background-size:cover;"
+          >
+            <button
+              type="button"
+              class="btn btn-info generate-math"
+              onclick="generateNumbers()"
+            >
+              New Set
+            </button>
+            <ul class="blanksList">
+              <li class="blanks">
+                <span class="card-1 cards animated"></span>
+                <span> + </span>
+                <span class="card-2 cards animated"></span>
+                <span> = </span>
+                <span class="answer-card animated">
+                  <span class="input-class">
+                    <form id="math-add-form" onclick="resetClass()">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Your Answer"
+                        id="input-answer"
+                      />
+                      <button class="btn btn-info" type="submit">Enter</button>
+                    </form>
+                  </span>
+                  <span class="answer-text"> </span>
+                  <span class="correct-answer animated">CORRECT!</span>
+                  <span class="wrong-answer animated" onclick="tryAgain()"
+                    >Oops...<br /><button class="btn btn-primary">
+                      Try Again!
+                    </button></span
+                  >
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div
           class="tab-pane fade"
