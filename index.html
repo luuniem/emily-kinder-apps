@@ -24,28 +24,28 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <h1>Emily's Kinder Apps</h1>
     <div class="container">
-      <h1>Emily's Kinder Apps</h1>
       <!-- NAVIGATION BEGIN -->
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a
             class="nav-item nav-link active"
-            id="nav-home-tab"
+            id="addition-tab"
             data-toggle="tab"
-            href="#nav-home"
+            href="#addition"
             role="tab"
-            aria-controls="nav-home"
+            aria-controls="addition"
             aria-selected="true"
             >Addition</a
           >
           <a
             class="nav-item nav-link"
-            id="nav-profile-tab"
+            id="subtraction-tab"
             data-toggle="tab"
-            href="#nav-profile"
+            href="#subtraction"
             role="tab"
-            aria-controls="nav-profile"
+            aria-controls="subtraction"
             aria-selected="false"
             >Subtraction</a
           >
@@ -72,12 +72,12 @@
         </div>
       </nav>
       <!-- NAVIGATION END -->
-      <div class="tab-content" id="nav-mathGame">
+      <div class="tab-content" id="mathGame">
         <div
           class="tab-pane fade show active"
-          id="nav-home"
+          id="addition"
           role="tabpanel"
-          aria-labelledby="nav-home-tab"
+          aria-labelledby="addition-tab"
           style="background: url('images/frozen.jpg');background-size:cover;"
         >
           <button
@@ -89,20 +89,19 @@
           </button>
           <ul class="blanksList">
             <li class="blanks">
-              <span class="card-1 cards animated"></span>
-              <span> + </span>
-              <span class="card-2 cards animated"></span>
-              <span> = </span>
+              <span class="card-1-add cards animated"></span>
+              <span class="operators"> + </span>
+              <span class="card-2-add cards animated"></span>
+              <span class="operators"> = </span>
               <span class="answer-card animated">
                 <span class="input-class">
-                  <form id="math-add-form" onclick="resetClass()">
+                  <form class="math-add-form" onclick="removeShakes()">
                     <input
                       type="number"
                       class="form-control"
-                      placeholder="Your Answer"
                       id="input-answer"
                     />
-                    <button class="btn btn-info" type="submit">Enter</button>
+                    <!-- <button class="btn btn-info" type="submit">Enter</button> -->
                   </form>
                 </span>
                 <span class="answer-text"> </span>
@@ -120,15 +119,15 @@
         <!-- END MATH GAME -->
         <div
           class="tab-pane fade"
-          id="nav-profile"
+          id="subtraction"
           role="tabpanel"
           aria-labelledby="nav-profile-tab"
         >
           <div
             class="tab-pane fade show active"
-            id="nav-home"
+            id="subtraction"
             role="tabpanel"
-            aria-labelledby="nav-home-tab"
+            aria-labelledby="subtraction-tab"
             style="background: url('images/forky.jpg');background-size:cover;"
           >
             <button
@@ -141,17 +140,17 @@
             <ul class="blanksList">
               <li class="blanks">
                 <span class="card-1 cards animated"></span>
-                <span> + </span>
+                <span> - </span>
                 <span class="card-2 cards animated"></span>
                 <span> = </span>
                 <span class="answer-card animated">
                   <span class="input-class">
-                    <form id="math-add-form" onclick="resetClass()">
+                    <form class="math-form" onclick="resetClass()">
                       <input
                         type="number"
                         class="form-control"
                         placeholder="Your Answer"
-                        id="input-answer"
+                        id="input-subtraction-answer"
                       />
                       <button class="btn btn-info" type="submit">Enter</button>
                     </form>
@@ -186,7 +185,10 @@
         </div>
       </div>
       <div class="points-class">
-        <h2>Total Points:<span class="points"></span></h2>
+        <h2>
+          Total Points:
+          <ul class="points"></ul>
+        </h2>
       </div>
     </div>
 

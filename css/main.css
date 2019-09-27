@@ -2,9 +2,56 @@
   font-family: "Fredoka One", cursive;
 }
 
+h1 {
+  margin-top: 2vh;
+  margin-bottom: 0;
+}
+
 .container {
-  border: 1px solid black;
   margin-top: 3vh;
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+  max-width: 95%;
+  padding-top: 2vh;
+  min-height: 80vh;
+  border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+  button.generate-math {
+    width: 95%;
+    font-size: 2rem;
+    opacity: 0.8;
+  }
+  .blanksList {
+    margin-top: 7vh !important;
+  }
+  .blanks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blanks .operators {
+    height: 3vh !important;
+  }
+  .blanks .cards,
+  .blanks .answer-card {
+    min-width: 95%;
+    height: 13vh;
+  }
 }
 
 h1 {
@@ -13,7 +60,7 @@ h1 {
   color: #ff8c94;
 }
 
-#nav-mathGame {
+#mathGame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,20 +70,20 @@ h1 {
           flex-direction: column;
 }
 
-#nav-mathGame .generate-math {
+#mathGame .generate-math {
   margin: 0 auto;
   display: block;
   margin-top: 20px;
 }
 
 @media (min-width: 1024px) {
-  #nav-mathGame .generate-math {
+  #mathGame .generate-math {
     font-size: 3em;
     padding: 2% 10%;
   }
 }
 
-#nav-mathGame .blanksList {
+#mathGame .blanksList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,16 +96,19 @@ h1 {
   padding: 0;
 }
 
-#nav-mathGame .blanksList .blanks {
+#mathGame .blanksList .blanks {
   width: 100%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-#nav-mathGame .blanksList .blanks span {
-  font-size: 8rem;
+#mathGame .blanksList .blanks span {
+  font-size: 2rem;
+  text-align: center;
   width: 10%;
   text-align: center;
   display: -webkit-box;
@@ -74,23 +124,47 @@ h1 {
 }
 
 @media (max-width: 991px) {
-  #nav-mathGame .blanksList .blanks span {
-    height: 22vh;
+  #mathGame .blanksList .blanks span {
+    height: 13vh;
   }
 }
 
 @media (min-width: 992px) {
-  #nav-mathGame .blanksList .blanks span {
-    height: 40vh;
+  #mathGame .blanksList .blanks span {
+    height: 15vh;
+    font-size: 8rem;
   }
 }
 
-#nav-mathGame .blanksList .blanks .input-class {
+@media (min-width: 1366px) {
+  #mathGame .blanksList .blanks span {
+    height: 25vh;
+    font-size: 8rem;
+  }
+}
+
+#mathGame .blanksList .blanks .math-add-form {
+  height: 100%;
+}
+
+#mathGame .blanksList .blanks .input-class {
   width: 100%;
   display: none;
 }
 
-#nav-mathGame .blanksList .blanks #math-add-form {
+#mathGame .blanksList .blanks #input-answer {
+  height: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #mathGame .blanksList .blanks #input-answer {
+    font-size: 8rem;
+  }
+}
+
+#mathGame .blanksList .blanks .math-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,40 +172,49 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-height: 100%;
 }
 
-#nav-mathGame .blanksList .blanks .card-1,
-#nav-mathGame .blanksList .blanks .card-2,
-#nav-mathGame .blanksList .blanks .answer-card {
+#mathGame .blanksList .blanks .card-1-add,
+#mathGame .blanksList .blanks .card-2-add,
+#mathGame .blanksList .blanks .answer-card {
   border-radius: 10px;
-  width: 40%;
+  width: 24%;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   background-color: rgba(255, 255, 255, 0.45);
 }
 
-#nav-mathGame .blanksList .blanks .answer-text {
+@media (min-width: 992px) {
+  #mathGame .blanksList .blanks .card-1-add,
+  #mathGame .blanksList .blanks .card-2-add,
+  #mathGame .blanksList .blanks .answer-card {
+    width: 23%;
+  }
+}
+
+#mathGame .blanksList .blanks .answer-text {
   display: none;
 }
 
-#nav-mathGame .blanksList .blanks .correct-answer {
+#mathGame .blanksList .blanks .correct-answer {
   display: none;
   border-radius: 10px;
 }
 
-#nav-mathGame .blanksList .blanks .correct-answer {
+#mathGame .blanksList .blanks .correct-answer {
   display: none;
   color: white;
   background-color: #26c75f;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
   border-radius: 10px;
 }
 
-#nav-mathGame .blanksList .blanks .wrong-answer {
+#mathGame .blanksList .blanks .wrong-answer {
   display: none;
   background-color: #ff8c94;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
